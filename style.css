@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&family=Lexend:wght@100;300;500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lexend", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  background-color: #6096b4;
+  padding: 1rem;
+  flex-direction: row;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+header > h1 {
+  font-family: "Lexend", sans-serif;
+  font-size: 2rem;
+  color: #d9e2e9;
+  padding-left: 2rem;
+}
+
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+
+header nav a {
+  color: #d9e2e9;
+  text-decoration: none;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  gap: 2rem;
+  padding-right: 3rem;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  padding: 1rem;
+  color: #3f3844;
+  gap: 1rem;
+}
+
+#blinking-cursor {
+  border-right: 0.1em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+
+main .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 60vw;
+  background: white;
+}
+
+.article-container {
+  display: flex;
+  flex-direction: row;
+}
+
+article {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.article-card {
+  background: white;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+}
+
+.article-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.thumbnail {
+  padding-bottom: 40%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.category {
+  font-size: 12px;
+  font-weight: bold;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 2em 0 0 0;
+}
+
+article > p {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.btn {
+  background: #6096b4;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 1rem;
+  font-family: "Lexend", sans-serif;
+  cursor: pointer;
+  border: none;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: #6096b4;
+  color: #d9e2e9;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+aside > h4,
+#profile {
+  align-self: center;
+}
+
+aside img {
+  width: 80%;
+  object-fit: cover;
+  align-self: center;
+}
+
+@media (max-width: 600px) {
+  header > h1 {
+    padding-left: 0;
+  }
+
+  header nav ul {
+    padding-right: 0;
+  }
+
+  main .card {
+    width: 100%;
+  }
+
+  main {
+    flex-direction: column;
+  }
+}
